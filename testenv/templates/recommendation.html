@@ -67,7 +67,7 @@
     </head>
     <body style="background-color:#FF0000;background-image:linear-gradient(-90deg,#BC1818,#FF0000)" class = "body_all">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #042345;">
-            <a class="navbar-brand" href="index.html" style="font-weight: 400"><img class="img-fluid" style="width:80px;height:auto;" src="https://i.ibb.co/FzKq07Z/logo1.jpg">Movie Recommendations</a>
+            <a class="navbar-brand" href="{{ url_for('index') }} "  style="font-weight: 400"><img class="img-fluid" style="width:80px;height:auto;" src="https://i.ibb.co/FzKq07Z/logo1.jpg">Movie Recommendations</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -81,32 +81,68 @@
 
     </div>
     <div class = "container">
-    <h4 style="text-align: center;margin:30px">
-            Enter a movie in the search and let us give you our recommendations &#128515
-    </h4>
-   <!-- <div class="search-box-wrapper">-->
-       <!-- <input type="text" placeholder="Enter Movie Name.... " class="search-box-input">
-         <button class="search-box-button">Recommend</button>  -->
-        <div class = "row">
-         <form action="{{ url_for('send') }}" method="POST">
-
-            <label> Movie Title </label>
-            <input type = 'text' name = 'title' value={{request.form.title}}>
-            <input type = 'text' name = 'userId' value={{request.form.userId}}>
-    
-            
-            <button> Submit </button>
-        </form>
+        <div class ="row  ">
+             <div class = "jumbotron mt-3 mx-auto">
         
-        </div> 
+                <h4 class = "display-4">What Are you Gonna Watch Tonight? &#128515</h4>
+                <p class ="lead mx-auto"> Use this system to discover movies based on your ratings history</p>
+
+
+                <form action="{{ url_for('send') }}" method="POST">
+                <input type = 'text' name = 'title' placeholder="Enter Movie Name.... " value={{request.form.title}}>
+                <input type = 'text' name = 'userId' placeholder="Enter a User ID.... " value={{request.form.userId}}>
+                
+        
+                 <button class="search-box-button">Submit</button>  
+
+            </form>
+            <hr class="my-4">
+
+            <table class = "table table-bordered table-dark table-responsive th.fit">
+                    <thead class = "thead-light">
+                        <tr>
+                            {% for col in colnames %}
+                            <th><h4>{{ col }}</h4></th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for record in records %}
+                        <tr>
+                            {% for col in colnames %}
+                            <td>{{ record[col] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+              
+            
+            
+            </div>
+
+    </div>
+              
+        <div class = "row">
+
+                 
+
+           
+
+         </div>
+         
+       
+           
 
         <div class = "row">
-            <div class = "card col-md-6">
+            <div class = "card col-md-10">
+                    <!-- <h3 class = "card-title">Other Movies you might like</h3> -->
+                
         <div class=page>
 
-          <h1>You also might like</h1>
-          <table class = "table table-striped">
-                <thead>
+        
+          <!-- <table class = "table table-bordered table-light">
+                <thead class = "thead-dark">
                     <tr>
                         {% for col in colnames %}
                         <th>{{ col }}</th>
@@ -123,7 +159,7 @@
                     {% endfor %}
                 </tbody>
             </table>
-          
+           -->
          </div>
 
     </div>

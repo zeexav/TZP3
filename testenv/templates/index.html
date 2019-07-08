@@ -34,7 +34,7 @@
     </head>
     <body style="background-color:#FF0000;background-image:linear-gradient(-90deg,#BC1818,#FF0000)" class = "body_all">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #042345;">
-            <a class="navbar-brand" href="index.html"  style="font-weight: 400"><img class="img-fluid" style="width:80px;height:auto;" src="https://i.ibb.co/FzKq07Z/logo1.jpg">Movie Recommendations</a>
+            <a class="navbar-brand" href="{{ url_for('index') }} "  style="font-weight: 400"><img class="img-fluid" style="width:80px;height:auto;" src="https://i.ibb.co/FzKq07Z/logo1.jpg">Movie Recommendations</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,28 +48,28 @@
         <div class="container">
             <div class="row" style="margin-top:65px;">
                 <div class="card col-md-12"  >
-                    <div class="card-title"><h3 style="margin-left:20px">Top 5 Family Movies</h3></div>
+                    <div class="card-title"><h3 style="margin-left:20px">Top 5 Most Popular Movies</h3></div>
                     <table class="table table-bordered table-responsive table-sm">
                         <tr>
                             <td style="padding: 10px;">                            
-                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:200px; height: auto;" src="https://m.media-amazon.com/images/M/MV5BYjFhOWY0OTgtNDkzMC00YWJkLTk1NGEtYWUxNjhmMmQ5ZjYyXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SY1000_CR0,0,648,1000_AL_.jpg"/>
-                                <figcaption style="text-align:center">Wonder</figcaption></a>  
+                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:190px; height: auto;" src="https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"> 
+                                    <figcaption style="text-align:center">Star Wars Episode IV: A New Hope</figcaption></a>  
                             </td>
                             <td style="padding: 10px;">
-                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:209px; height: auto" src="https://m.media-amazon.com/images/M/MV5BMTY5OTU0OTc2NV5BMl5BanBnXkFtZTcwMzU4MDcyMQ@@._V1_SY1000_CR0,0,675,1000_AL_.jpg"/>
-                                <figcaption style="text-align:center">Incredibles</figcaption></a>   
+                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:215px; height: auto" src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"/>
+                                <figcaption style="text-align:center">Pulp Fiction</figcaption></a>   
                             </td>
                             <td style="padding: 10px;">
-                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:200px; height: auto" src="https://m.media-amazon.com/images/M/MV5BNTkzY2YzNmYtY2ViMS00MThiLWFlYTEtOWQ1OTBiOGEwMTdhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX640_CR0,0,640,999_AL_.jpg"/>
-                                <figcaption style="text-align:center">The Karate Kid</figcaption></a>
+                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:215px; height: auto" src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"/>
+                                <figcaption style="text-align:center">Forrest Gump</figcaption></a>
                             </td>
                             <td style="padding: 10px;">
-                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:209px; height: auto" src="https://m.media-amazon.com/images/M/MV5BMGM4M2Q5N2MtNThkZS00NTc1LTk1NTItNWEyZjJjNDRmNDk5XkEyXkFqcGdeQXVyMjA0MDQ0Mjc@._V1_SY1000_CR0,0,676,1000_AL_.jpg"/>
-                                <figcaption style="text-align:center">The Princess Bride</figcaption></a> 
+                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:209px; height: auto" src="https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg"/>
+                                <figcaption style="text-align:center">Jurassic Park</figcaption></a> 
                             </td>
                             <td style="padding: 10px;">
-                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:209px; height: auto" src="https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_SY1000_SX675_AL_.jpg"/>
-                                <figcaption style="text-align:center">ZOOTOPIA</figcaption></a> 
+                                <a style="text-decoration:none;color:black;" href='#'><img id="myImg" class="img-fluid" style = "width:209px; height: auto" src=" https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"/>
+                                <figcaption style="text-align:center">Terminator 2: Judgement Day</figcaption></a> 
                             </td>
                         </tr>
                         

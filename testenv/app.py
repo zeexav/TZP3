@@ -5,7 +5,7 @@ import numpy as np
 import os
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import json
+
 
 app = Flask(__name__)
 
@@ -47,8 +47,8 @@ def send():
         content_results = pd.DataFrame(data['movieId'].iloc[movie_indices])
 
         # files for collaborative filtering model
-        ratings = pd.read_csv('Data/ratings_sml.csv')
-        preds = pd.read_hdf('Data/predsfin_hdf.h5')
+        ratings = pd.read_hdf('Data/ratings_hdf.h5')
+        preds = pd.read_hdf('Data/preds2_hdf.h5')
 
         #begin collaborative filtering process
         sorted_user_predictions = pd.DataFrame(preds.iloc[user].sort_values(ascending=False).reset_index())
@@ -77,12 +77,11 @@ def send():
         # Display only the highest ranked ones
         movie_recs = pd.merge(content_results, movie_preds, how='left', on='movieId').\
         sort_values('Predictions', ascending=False).dropna()
-        top5_df = pd.DataFrame(movie_recs['Title'][:11])
+        top5_df = pd.DataFrame(movie_recs[['Title', 'Plot']][:11])
         results = top5_df.to_dict('records')
         columnNames = top5_df.columns.values
 
         return render_template('recommendation.html', records = results, colnames = columnNames)
-
 
 
 
