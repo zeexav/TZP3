@@ -48,7 +48,7 @@ def send():
 
         # files for collaborative filtering model
         ratings = pd.read_csv('Data/ratings_sml.csv')
-        preds = pd.read_hdf('Data/preds_hdf2.h5')
+        preds = pd.read_hdf('Data/predsfin_hdf.h5')
 
         #begin collaborative filtering process
         sorted_user_predictions = pd.DataFrame(preds.iloc[user].sort_values(ascending=False).reset_index())
