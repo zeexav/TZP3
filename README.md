@@ -6,7 +6,7 @@
 </p>
 
 ### Overview 
-The main objective of this project is to contruct a system to increase performance capability in speed and accuracy updating our [first model](https://columbia.bootcampcontent.com/Zee/movies_rec_project_3) as a starting point.
+The main objective of this project is to contruct a system to increase performance capability in speed and accuracy updating our [first model](https://columbia.bootcampcontent.com/Zee/movies_rec_project_3) as a starting point. Please note that we are only showing the codes from the improved performances in this repository. For the first part please click on the first model link. 
 
 ---
 ### Project Content
@@ -19,9 +19,8 @@ The main objective of this project is to contruct a system to increase performan
    2. [Ratings](https://github.com/zeexav/TZP3/blob/master/testenv/Ratings.ipynb)
 3. Final Dataset 
 4. Build Recommender Systems
-   1. Content Based `recosys` 
-   2. Collaborative Filtering `recoSys`
-   3. SVD - Singular Value Decomposition `recoSys`
+   1. Content and Collaborative Filtering `recoSys` 
+   2. SVD - Singular Value Decomposition `recoSys`
 5. Hybrid RecoSys Engine 
 ---
 ### 1. Load Data
@@ -40,6 +39,14 @@ At this stage of the project we utilized the ratings dataset from Movielens whic
 ### 3. Final Dataset 
 After few processes of data cleaning and analysis we were able to build our final dataset. in order to build our final dataset we took into consideration our main goal, which is speed and accuracy but we also needed to be mindfull of our computational limitations as we only had our personla computers to work on. 
 At first, we explored a hybrid of movie popularity with only users that have rated in between 50 and 150 movies. This process only generated 910 movies. As we were trying to undertand the lower return from our first process, we explored our avalible data further realizing that most of the users rated less than 200 movies. With that in mind we used a variety of ranges in order to come up with a perfect datase for our use. We were able to come up with an ok dataset consideration our limitations and the final dataset has 111102 movies rated by 27585 users. The optimal range ustilized was inbetween 75 and 150. 
+
+### 4. Build Recommender Systems 
+##### i. Content and Collaborative Systems 
+<p align="center"> 
+<img src="img/rec-systems.png">
+</p>
+
+
 
 
 
