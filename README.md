@@ -2,5 +2,5 @@
 
 
 <p align="center"> 
-<img src="![tzp3](img/tzp3_img.gif)">
+<img src="(img/tzp3_img.gif)">
 </p>
