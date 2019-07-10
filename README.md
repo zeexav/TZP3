@@ -12,6 +12,6 @@ The main objective of this project is to contruct a system to increase performan
 ## Project Content
 
 1. Bullet list
- 1. Nested bullet
+ 1. Nested bulle
  2. Sub-nested bullet etc
 2. Bullet list item 2
