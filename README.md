@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img width="460" height="300" src="![tzp3](img/tzp3_img.gif)">
+  <img src="![tzp3](img/tzp3_img.gif)">
 </p>
 
 
