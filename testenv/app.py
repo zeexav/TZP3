@@ -31,6 +31,7 @@ def send():
         movie_name = request.form['title']
         user = request.form['userId']
         user = int(user)
+        
         data = pd.read_csv('Data/movies_bow.csv')
         movies = pd.read_csv('Data/movies_sml.csv')
         print(os.getcwd())
@@ -42,16 +43,19 @@ def send():
         cosine_sim = cosine_similarity(count_matrix, count_matrix)
         sim_scores = list(enumerate(cosine_sim[idx]))
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-        sim_scores = sim_scores[1:26]
+        sim_scores = sim_scores[1:51]
         movie_indices = [i[0] for i in sim_scores]
         content_results = pd.DataFrame(data['movieId'].iloc[movie_indices])
 
         # files for collaborative filtering model
         ratings = pd.read_hdf('Data/ratings_hdf.h5')
-        preds = pd.read_hdf('Data/preds2_hdf.h5')
+        preds = pd.read_hdf('Data/predsfin_hdf.h5')
 
         #begin collaborative filtering process
-        sorted_user_predictions = pd.DataFrame(preds.iloc[user].sort_values(ascending=False).reset_index())
+        
+        user = preds.loc[preds['id']== user].index[0]
+        sorted_user_predictions = preds.iloc[user].sort_values(ascending=False) 
+        sorted_user_predictions = pd.DataFrame(sorted_user_predictions[1:]).reset_index()
 
         # Get the movies the user originally rated
         user_data = ratings[ratings.userId == user]
@@ -77,31 +81,13 @@ def send():
         # Display only the highest ranked ones
         movie_recs = pd.merge(content_results, movie_preds, how='left', on='movieId').\
         sort_values('Predictions', ascending=False).dropna()
-        top5_df = pd.DataFrame(movie_recs[['Title', 'Plot']][:11])
-        results = top5_df.to_dict('records')
-        columnNames = top5_df.columns.values
+        top10_df = pd.DataFrame(movie_recs[['Title','genres', 'Plot']][:10])
+        results = top10_df.to_dict('records')
+        columnNames = top10_df.columns.values
 
         return render_template('recommendation.html', records = results, colnames = columnNames)
 
 
-
-
-
-        # movies_map = data.copy()
-        # movies_map.reset_index(inplace=True)
-        # movies_map = movies_map.rename(columns={'index': 'id'})
-        # movies = movies_map.iloc[movie_indices][['Title', 'id']]
-        # new_ratings = pd.read_csv('new_ratings.csv')
-        # reader = Reader()
-        # Dataset.load_from_df(new_ratings[['userId', 'movieId', 'rating']], reader)
-        # svd = joblib.load('svd.pkl')
-        # movies['est'] = movies['id'].apply(lambda x: svd.predict(user, movies_map.loc[x]['movieId']).est)
-        # movies = movies.sort_values('est', ascending=False)
-        # top10_df = pd.DataFrame(movies['Title'][:11])
-        # results = top10_df.to_dict('records')
-        # columnNames = top10_df.columns.values
-                
-        # return render_template('recommendation.html', records = results, colnames = columnNames)
 
 
 if __name__ == '__main__':
