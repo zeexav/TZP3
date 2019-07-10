@@ -20,7 +20,7 @@ The main objective of this project is to contruct a system to increase performan
 3. Final Dataset 
 4. Build Recommender Systems
    1. Content and Collaborative Filtering `recoSys` 
-   2. SVD - Singular Value Decomposition `recoSys`
+   2. Implemanting SVD - Singular Value Decomposition `recoSys`
 5. Hybrid RecoSys Engine 
 ---
 ### 1. Load Data
@@ -60,6 +60,33 @@ Clink on the link for our Collaborative Filtering recoSys. Please note that teh 
 The Collaborative Filtering Recommender is entirely based on the past behavior and not on the context. More specifically, it is based on the similarity in preferences, tastes and choices of two users. It analyses how similar the tastes of one user is to another and makes recommendations on the basis of that.
 For instance, if user A likes movies 1, 2, 3 and user B likes movies 2,3,4, then they have similar interests and A should like movie 4 and B should like movie 1. This makes it one of the most commonly used algorithm as it is not dependent on any additional information.
 In general, collaborative filtering is the workhorse of recommender engines. The algorithm has a very interesting property of being able to do feature learning on its own, which means that it can start to learn for itself what features to use. It can be divided into Memory-Based Collaborative Filtering and Model-Based Collaborative filtering. In this post, I'll only focus on the Memory-Based Collaborative Filtering technique.
+
+##### ii. [Implementing SVD - Singular Value Decomposition](https://github.com/zeexav/TZP3/blob/master/testenv/Ratings.ipynb)
+
+Click on the link for our repository. 
+
+<p align="center"> 
+<img src="img/dimensionality-reduction.jpg">
+</p>
+
+Model-based Collaborative Filtering is based on matrix factorization (MF) which has received greater exposure, mainly as an unsupervised learning method for latent variable decomposition and dimensionality reduction. Matrix factorization is widely used for recommender systems where it can deal better with scalability and sparsity than Memory-based CF:
+
+The goal of MF is to learn the latent preferences of users and the latent attributes of items from known ratings (learn features that describe the characteristics of ratings) to then predict the unknown ratings through the dot product of the latent features of users and items.
+When you have a very sparse matrix, with a lot of dimensions, by doing matrix factorization, you can restructure the user-item matrix into low-rank structure, and you can represent the matrix by the multiplication of two low-rank matrices, where the rows contain the latent vector.
+You fit this matrix to approximate your original matrix, as closely as possible, by multiplying the low-rank matrices together, which fills in the entries missing in the original matrix.
+
+##### SVD 
+
+A well-known matrix factorization method is Singular value decomposition (SVD). At a high level, SVD is an algorithm that decomposes a matrix A into the best lower rank (i.e. smaller/simpler) approximation of the original matrix A. Mathematically, it decomposes A into a two unitary matrices and a diagonal matrix:
+
+
+<p align="center"> 
+<img src="img/svd.png">
+</p>
+
+
+
+
 
 
 
