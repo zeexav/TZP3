@@ -11,7 +11,7 @@ The main objective of this project is to contruct a system to increase performan
 
 ## Project Content
 1. Load data
- - 1.2 The Dataset 
+ 1. The Dataset 
 2. Exploratory data analysis
 3. Build Recommender Systems
 ..* 3.1 Content Based `recosys` 
@@ -19,3 +19,7 @@ The main objective of this project is to contruct a system to increase performan
 ..* 3.3 SVD - Singular Value Decomposition `reco`
 4. Hybrid RecoSys Engine 
 
+1. A numbered list
+              1. A nested numbered list
+              2. Which is numbered
+          2. Which is numbered
