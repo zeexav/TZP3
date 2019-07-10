@@ -84,6 +84,17 @@ A well-known matrix factorization method is Singular value decomposition (SVD). 
 <img src="img/svd.png">
 </p>
 
+where A is the input data matrix (users's ratings), U is the left singular vectors (user "features" matrix), Σ is the diagonal matrix of singular values (essentially weights/strengths of each concept), and VT is the right singluar vectors (movie "features" matrix). U and VT are column orthonomal, and represent different things. U represents how much users "like" each feature and VT represents how relevant each feature is to each movie.
+
+To get the lower rank approximation, I take these matrices and keep only the top k features, which can be thought of as the underlying tastes and preferences vectors.
+
+### 5. [Hybrid RecoSys Engine](https://github.com/zeexav/TZP3/blob/master/testenv/Hybrid.ipynb)
+
+Click on the link for our repository. 
+
+Welcome to the last part of the project. Here we were able to join both systems combining both features. 
+
+
 
 
 
