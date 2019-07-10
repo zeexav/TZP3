@@ -19,25 +19,17 @@ The main objective of this project is to contruct a system to increase performan
 ..* 3.3 SVD - Singular Value Decomposition `reco`
 4. Hybrid RecoSys Engine 
 
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
 
-1. Import our dependencies
-2. Load dataset
-3. Understand dataset
-4. Data Wrangling (Already done)
-5. Pre-processing steps (We will perform the pre-processing steps as and when needed)
-6. Build recommendation system
-   6.1 Simple recommendation system
-        6.1.1 Implement model
-        6.1.2 Evaluate Result
-    6.2 Content based recommendation system
-        6.2.1 Implement model
-        6.2.2 Evaluate Result
-    6.3 CF based recommendation system
-        6.3.1 Implement model
-        6.3.2 Evaluate Result
-    6.4 Hybrid recommendation system
-        6.4.1 Implement model
-        6.4.2 Evaluate Result
-Deep dive into the bottleneck of item-based collaborative filtering.
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
 
