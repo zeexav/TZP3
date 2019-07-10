@@ -16,8 +16,7 @@ The main objective of this project is to contruct a system to increase performan
       2. OMDb
 2. Data Preparation
    1. [Movies](https://github.com/zeexav/TZP3/blob/master/testenv/Movies.ipynb)
-      1. OMDb
-      2. DataLens
+   2. [Ratings](https://github.com/zeexav/TZP3/blob/master/testenv/Ratings.ipynb)
 3. Build Recommender Systems
    1. Content Based `recosys` 
    2. Collaborative Filtering `recoSys`
