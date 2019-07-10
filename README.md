@@ -11,7 +11,7 @@ The main objective of this project is to contruct a system to increase performan
 
 ## Project Content
 
-1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
+* Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
