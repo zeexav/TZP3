@@ -31,6 +31,12 @@ From MovieLens we decided to utilize the [20M dataset](http://files.grouplens.or
 ##### 1.1.3. [OMDb](http://www.omdbapi.com/)
 We decided to utilize two datasets from OMDb, the first contains 17K  movies made from 1990, the second set contains 19K movies made from 2009 to 2018.
 
-### 2. Exploratory Data Analysis
+### 2. Data Preparation 
+##### 2.1 Movies
+In summary OMDd data was gathered by using the movie titles from the MovieLens data set by calling the API. Only movie titles that matched returned information. Since API matching isn't higly effective we started the process cleaning the data to start our joining tables procedure. For the whole cleaning process on the movie datasets please click on the link 'movies' under project content.
+##### 2.1.1 OMDb
+
+
+
 
 
