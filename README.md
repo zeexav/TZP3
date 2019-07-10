@@ -21,4 +21,4 @@ The main objective of this project is to contruct a system to increase performan
 ---
 #### 1. Load Data
 >#### 1.1 The Dataset 
->Initial datasets was downloaded from [Movielens](https://grouplens.org/datasets/movielens/) and we also pull data from [OMDb](http://www.omdbapi.com/) using API. 
+>Initial datasets was downloaded from [Movielens](https://grouplens.org/datasets/movielens/) and we also utilized datasets from [OMDb](http://www.omdbapi.com/) using their API. From MovieLens we decided to utilize the [20M dataset](http://files.grouplens.org/datasets/movielens/ml-20m-README.html) wich provided us 20 million ratings and 465,000 tag applications applied to 27,000 movies by 138,000 users. 
