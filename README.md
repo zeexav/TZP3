@@ -6,9 +6,9 @@
 </p>
 
 ### Overview 
-
+---
 The main objective of this project is to contruct a system to increase performance capability in speed and accuracy updating our [first model](https://columbia.bootcampcontent.com/Zee/movies_rec_project_3) as a starting point.
-
+---
 ### Project Content
 1. Load Data
    1. The Dataset 
@@ -18,7 +18,7 @@ The main objective of this project is to contruct a system to increase performan
    2. Collaborative Filtering `recoSys`
    3. SVD - Singular Value Decomposition `recoSys`
 4. Hybrid RecoSys Engine 
-
+---
 #### 1. Load Data
 >#### 1.1 The Dataset 
 >Initial datasets was downloaded from [Movielens](https://grouplens.org/datasets/movielens/) and we also pull data from [OMDb](http://www.omdbapi.com/) using API. 
