@@ -7,6 +7,7 @@
 
 ### Overview 
 The main objective of this project is to contruct a system to increase performance capability in speed and accuracy updating our [first model](https://columbia.bootcampcontent.com/Zee/movies_rec_project_3) as a starting point.
+
 ---
 ### Project Content
 1. Load Data
