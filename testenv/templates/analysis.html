@@ -35,26 +35,37 @@
         <div class = "row mt-5 ml-5">
 
             <div class = " card col-md-10">
-                <h3 class = "card-header"> Exploring Profit and Ratings</h3>
+                <h4 class = "card-header"> Relationship between Number of Ratings and Mean Rating </h4>
+                <img src = "../Images/mean_ratings_scatter.png"></img>
 
-                    <!-- <div class = "embed-responsive embed-responsive-4by3"> -->
-                        <!-- <iframe class="embed-responsive-item" src="https://public.tableau.com/views/MovieRatingPlottedAgainstProfit/Sheet1?:showVizHome=no&:embed=true"
-                        width="600" height="600"></iframe>
-                    </div> -->
+                <p>The Scatter Plot above demonstrates a few facts about the data set: </p>
+                <ul>
+                    <li>Most movies are rated less than 20,000 times</li>   
+                    <li>The majority of movies have a mean rating of between 3 and 4 on a scale of 1 to 5</li>  
+                    <li>There is a slight positive relationship between number of ratings and mean rating </li>  
+                    <li>The movies that are rated 5 have very few ratings</li>  
+                </ul>
 
-                    <div class='tableauPlaceholder' id='viz1561720790865' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MovieRatingPlottedAgainstProfit&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MovieRatingPlottedAgainstProfit&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MovieRatingPlottedAgainstProfit&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1561720790865');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-                 </div>
+               
+                 
 
             </div>
         </div>
         <div class = "row mt-5 ml-5">
                 <!-- <div class = "embed-responsive embed-responsive-4by3"> -->
                 <div class = " card col-md-10">
-                        <h3 class = "card-header"> Exploring Ratings Against Box Office</h3>
-
+                        <h4 class = "card-header"> Summary of the Distribution of the Total Ratings per User </h4>
+                        
+                        <img src = "../Images/ratings_histogram.png"></img>
+                        <p>The histogram and other supporting exploratory analysis demonstrated the following facts about the Ratings dataset:</p>
+                            <ul>
+                                <li> The majority of users rated less than a 100 movies. Exploratory Data Analysis showed that the mean number of ratings per user is 56.   </li>
+                                <li>Very few users rated more than 500 movies</li>
+                            </ul>
+                        <p> Due to limited processing power, we had to limit the size of our Ratings dataset. As a result of these results, we chose to utilize a subset of similar users based on the fact that they rated a similar number of movies. We attempted a variety of ranges to find a quality dataset of users and movies. In a larger version of this project we used Users who rated between 75 and 150 movies. This dataset contained 11,102 unique movies rated by 27,585 users. <a href="https://github.com/zeexav/TZP3" target = "_blank">Visit our Github Repo </a> </p>
                         
 
-                             <div class='tableauPlaceholder' id='viz1561720603884' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MovieRatingPlottedAgainstBoxOffice&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MovieRatingPlottedAgainstBoxOffice&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MovieRatingPlottedAgainstBoxOffice&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1561720603884');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='95%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                       
         
                         </div>
 
