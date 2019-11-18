@@ -28,10 +28,10 @@ The main objective of this project is to contruct a system to increase performan
 ##### a. [MovieLens](https://grouplens.org/datasets/movielens/) 
 From MovieLens we decided to utilize the [20M dataset](http://files.grouplens.org/datasets/movielens/ml-20m-READFME.html) wich provided us 20 million ratings and 465,000 tag applications applied to 27,000 movies by 138,000 users.
 ##### b. [OMDb](http://www.omdbapi.com/)
-wE narrowed our reviews to only include movies from 1990-2008. Additional data about each movie was sourced from the OMDb API
+wE narrowed our reviews to only include movies from 1990-2008. Additional data about each movie was sourced from the OMDb API.
 ### 2. Data Preparation - Analysis
 ##### i. Movies
-In summary OMDd data was gathered by using the movie titles from the MovieLens data set by calling the API.To see how this was achieved refer to the Movies_data notebook. Only movie titles that matched returned information and since API matching is not strict matching we needed to start a cleaning process to be able to join all the tables in one single data frame. For the whole cleaning process on the movie datasets please click on the link 'movies' under project content.
+In summary OMDd data was gathered by using the movie titles from the MovieLens data set by calling the API.To see how this was achieved refer to the Movies_data notebook (https://github.com/zeexav/TZP3/blob/master/testenv/Movies_data.ipynb). Only movie titles that matched returned information and since API matching is not strict matching we needed to start a cleaning process to be able to join all the tables in one single data frame. For the whole cleaning process on the movie datasets please click on the link 'movies' under project content.
 ##### ii. Ratings 
 At this stage of the project we utilized the ratings dataset from Movielens which contains approximately 27,000,000 ratings. We first explored the data doing a data analysis in order to decide the best route to take to come up with a final data set to utilize in our models. We tested different sizes on our ML models as we needed to ultimetly decide if we should slipt it based on metric or just randomly select a percentage of the data. 
 
