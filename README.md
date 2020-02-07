@@ -19,8 +19,8 @@ The main objective of this project is to contruct a system to increase performan
    2. [Ratings](https://github.com/zeexav/TZP3/blob/master/testenv/Ratings.ipynb)
 3. Final Dataset 
 4. Build Recommender Systems
-   1. Content and Collaborative Filtering `recoSys` 
-   2. Implemanting SVD - Singular Value Decomposition `recoSys`
+   1. Content Filtering `recoSys` 
+   2. Collaborative Filtering 'recoSys'Implemanting SVD - Singular Value Decomposition `recoSys`
 5. Hybrid RecoSys Engine 
 ---
 ### 1. Load Data
